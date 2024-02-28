@@ -1,0 +1,21 @@
+.header{
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    text-align: center;
+}
+.header_title{
+    font-size: 40px;
+}
+.students{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+table{
+    border-style: solid;
+}
+td{
+    border-style: solid;
+}

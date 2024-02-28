@@ -1,0 +1,30 @@
+doctype html  
+html  
+    head  
+        title 平时成绩查询
+        link(rel='stylesheet', href='/stylesheets/index.css')
+        script(src="/javascripts/logical.js")  
+    body
+    div.header
+        div.header_title 平时成绩查询
+        div.students
+            table.students_table 
+                thead  
+                    tr 
+                        td 班级
+                        td 学号
+                        td 姓名
+                        td 平时作业缴交次数
+                        td 迟到次数
+                        td 旷课节数
+                tbody
+                    each student in students  
+                        tr
+                            td=student.sclass
+                            td=student.sid 
+                            td=student.sname 
+                            td=student.homeworkNum 
+                            td=student.belateNum
+                            td=student.absenceNum 
+
+        
