@@ -1,0 +1,25 @@
+doctype html  
+html  
+    head  
+        title Hackathon参赛名单
+        link(rel='stylesheet', href='/stylesheets/index.css')
+        script(src="/javascripts/logical.js")  
+    body
+    div.header
+        div.header_title Hackathon参赛名单
+        div.students
+            table.students_table 
+                thead  
+                    tr 
+                        td 队伍名称
+                        td 队伍人数
+                        td 队伍成员
+                        td Github
+                tbody
+                    each student in students  
+                        tr
+                            td=student.team_name
+                            td=student.team_number
+                            td=student.team_menmbers
+                            td
+                                a(href=student.github, target='_blank')=student.github
