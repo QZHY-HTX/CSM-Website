@@ -1,30 +1,19 @@
-extends layout
-
-block content
-  h1 Student Details
-  table
-    tr
-      th 班级
-      td= student.sclass
-    tr  
-      th 学号
-      td= student.sid
-    tr
-      th 姓名 
-      td= student.sname
-    tr
-      th 平时作业缴交次数
-      td= student.homeworkNum
-    tr
-      th 迟到次数
-      td= student.belateNum
-    tr
-      th 旷课节数
-      td= student.absenceNum
-    tr
-      th 加分项
-      td= student.addNum
-    tr
-      th GitHub
-      td
-        a(href=student.GitHub, target='_blank')= student.GitHub
+extends layout  
+  
+block content  
+  div.student-details  
+    if student  
+      h2   
+      p 学号: #{student.sid}  
+      p 姓名: #{student.sname}  
+      ul  
+        li.one 第一次作业成绩: #{student.score1}  
+        li.one 第二次作业成绩: #{student.score2}  
+        li.one 第三次作业成绩: #{student.score3}  
+        li.one 第四次作业成绩: #{student.score4}  
+        li.one 第五次作业成绩: #{student.score5}  
+        li.one 第六次作业成绩: #{student.score6}  
+        li.one 第七次作业成绩: #{student.score7}  
+        li 第八次作业成绩: #{student.score8}  
+    else  
+      p 没有找到该学生。
