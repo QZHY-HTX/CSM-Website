@@ -17,11 +17,14 @@ html
                         td 平时作业缴交次数
                         td 迟到次数
                         td 旷课节数
+                        td 表现加分
+                        td Github
                 tbody
                     each student in students  
                         tr
                             td=student.sclass
-                            td=student.sid 
+                            td(class="sid" data-sid=student.sid)
+                                a(href="#")=student.sid 
                             td=student.sname 
                             td=student.homeworkNum 
                             td=student.belateNum
