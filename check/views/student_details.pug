@@ -1,0 +1,30 @@
+extends layout
+
+block content
+  h1 Student Details
+  table
+    tr
+      th 班级
+      td= student.sclass
+    tr  
+      th 学号
+      td= student.sid
+    tr
+      th 姓名 
+      td= student.sname
+    tr
+      th 平时作业缴交次数
+      td= student.homeworkNum
+    tr
+      th 迟到次数
+      td= student.belateNum
+    tr
+      th 旷课节数
+      td= student.absenceNum
+    tr
+      th 加分项
+      td= student.addNum
+    tr
+      th GitHub
+      td
+        a(href=student.GitHub, target='_blank')= student.GitHub
